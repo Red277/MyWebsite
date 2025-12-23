@@ -2,22 +2,44 @@
 import { useRoute } from 'vue-router';
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
+import { ref, watch } from 'vue';
 
 const route = useRoute();
+
+const isNavbarActivated = ref(false);
+
+function activateNavbar() {
+  isNavbarActivated.value = true;
+}
+
+//hide scroll until navbar is activated
+document.documentElement.style.overflow = 'hidden';
+document.body.style.overflow = 'hidden';
+watch(isNavbarActivated, (newVal) => {
+  if (newVal) {
+    document.documentElement.style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
+  }
+});
+
 </script>
 
 <template>
-  <body>
-      <v-app>
-        <Navbar v-if="route.name !== 'home'" />
-        <RouterView />
-        <Footer />
-      </v-app>
-  </body>
-
+  <div>
+    <v-app>
+      <Navbar :isActivated="isNavbarActivated" />
+      <RouterView v-slot="{ Component }">
+        <component :is="Component" @activate-navbar="activateNavbar" />
+      </RouterView>
+      <Footer />
+    </v-app>
+  </div>
 </template>
 
-<style scoped>
+<style>
+body {
+  overflow: hidden;
+}
 
 /* .logo {
   display: block;

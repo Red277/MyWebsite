@@ -1,17 +1,19 @@
 <script setup>
-  import HomeView from '@/views/HomeView.vue';
-  import AboutView from '@/views/AboutView.vue';
-  import SkillsView from '@/views/SkillsView.vue';
-  import ProjectsView from '@/views/ProjectsView.vue';
-  import ContactView from '@/views/ContactView.vue';
-  import HelloWorld from '@/components/HelloWorld.vue';
-</script >
+import HomeView from '@/views/HomeView.vue';
+import AboutView from '@/views/AboutView.vue';
+import SkillsView from '@/views/SkillsView.vue';
+import ProjectsView from '@/views/ProjectsView.vue';
+import ContactView from '@/views/ContactView.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
+
+const emit = defineEmits(['activate-navbar'])
+</script>
 
 <template>
   <div id="home" style="height: 100vh;">
-    <HomeView />
+    <HomeView @activate-navbar="$emit('activate-navbar')" />
   </div>
-
+  
   <div id="about" style="height: 100vh; background: gray;">
     <AboutView />
   </div>

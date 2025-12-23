@@ -1,8 +1,14 @@
-<script>
+<script setup>
 import { RouterLink } from 'vue-router'
+const props = defineProps({
+  isActivated: {
+    type: Boolean,
+    default: false
+  }
+})
 </script>
 <template>
-  <v-app-bar :elevation="2" color="darken-4" style="opacity: 0.5;">
+  <v-app-bar v-if="isActivated" :elevation="2" color="darken-4" style="opacity: 0.5;">
 
 
 
