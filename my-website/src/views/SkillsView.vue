@@ -13,7 +13,18 @@ import SkillsItem from '@/components/SkillsItem.vue';
         rounded
         class="position-"
       >
-        <SkillsItem skill-title="JavaScript" url-ref="/src/assets/javascript.svg"/>
+        <v-container>
+          <v-row>
+            <v-col
+              v-for="n in 10"
+              cols="auto"
+            >
+              <SkillsItem skill-title="JavaScript" url-ref="/src/assets/javascript.svg"/>
+            </v-col>
+
+          </v-row>
+        </v-container>
+
 
       </v-sheet>
     </div>

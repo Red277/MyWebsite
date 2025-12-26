@@ -1,7 +1,7 @@
 <template>
   <v-sheet
-    width="10%"
-    height="20%"
+    width="100px"
+    height="120px"
     rounded
     elevation="8"
     class="pa-4"
