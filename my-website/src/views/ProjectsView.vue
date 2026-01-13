@@ -1,9 +1,17 @@
+<script setup lang="ts">
+import ProjectItem from '@/components/ProjectItem.vue';
+import TitleGraphic from '@/components/TitleGraphic.vue';
+
+</script>
+
 <template>
-  <div>
-    <h1>Projects</h1>
-    <p>My projects.</p>
+  <div style="display: flex; justify-content: center; align-items: center; height: inherit; position: relative;">
+    <TitleGraphic title="Projects" />
+
+
+
+    <ProjectItem />
+
+
   </div>
 </template>
-
-<style scoped>
-</style>
