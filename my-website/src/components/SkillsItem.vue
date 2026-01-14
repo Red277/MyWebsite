@@ -1,5 +1,5 @@
 <template>
-  <v-sheet
+  <!-- <v-sheet
     width="100px"
     height="120px"
     rounded
@@ -17,15 +17,27 @@
     </div>
     <div style="text-align: center; padding-top: 4px; font-weight: bold;">{{ props.skillTitle }} </div>
 
-  </v-sheet>
+  </v-sheet> -->
+
+  <v-card class="mx-auto" :subtitle="description" width="300" hover>
+    <template v-slot:title>
+      <span class="font-weight-black">{{ skillTitle }}</span>
+    </template>
+
+    <template v-slot:prepend>
+      <v-icon :color="iconColor" :size="'50px'" :icon="icon"></v-icon>
+    </template>
+
+  </v-card>
 </template>
 
 <script setup lang="ts">
-  const props = defineProps({
-    urlRef: String,
-    skillTitle: String
-  });
+const props = defineProps({
+  icon: String,
+  skillTitle: String,
+  description: String,
+  iconColor: String
+});
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

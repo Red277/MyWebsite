@@ -5,13 +5,14 @@ import TitleGraphic from '@/components/TitleGraphic.vue';
 
 <template>
   <div style="display: flex; justify-content: center; align-items: center; height: inherit; position: relative;">
-    <TitleGraphic title="Skills" />
+    <TitleGraphic title="Overview" />
 
-    <v-sheet width="60%" height="60%" rounded class="position-">
+    <v-sheet width="70%" height="60%" rounded color="transparent">
       <v-container>
         <v-row>
-          <v-col v-for="n in 10" cols="auto">
-            <SkillsItem skill-title="JavaScript" url-ref="/src/assets/javascript.svg" />
+          <v-col v-for="n in 6" cols="auto">
+            <SkillsItem skill-title="JavaScript" icon="mdi-language-javascript"
+              description="stuff, stuff, stuff, stuff, stuff" icon-color="yellow" />
           </v-col>
 
         </v-row>
