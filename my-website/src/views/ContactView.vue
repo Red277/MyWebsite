@@ -1,9 +1,11 @@
 <template>
   <div style="display: flex; justify-content: center; align-items: center; height: inherit; position: relative;">
     <TitleGraphic title="Contact" />
-    <v-sheet width="50%" rounded>
+    <v-sheet width="50%" color="transparent">
 
-      <p style="padding-bottom: 3rem;">Have any questions or just want to get in touch?</p>
+      <p style="padding-bottom: 3rem; font-weight: 600; font-size: large;">Have any questions or just want to get in
+        touch? Send me a
+        message and I will get back to you as soon as possible!</p>
       <form @submit.prevent="submit" style="width: 100%; height: 100%;">
         <v-text-field v-model="name.value.value" :counter="10" :error-messages="name.errorMessage.value"
           label="Name"></v-text-field>
