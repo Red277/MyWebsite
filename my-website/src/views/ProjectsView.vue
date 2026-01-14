@@ -10,7 +10,8 @@ import TitleGraphic from '@/components/TitleGraphic.vue';
 
 
 
-    <ProjectItem />
+    <ProjectItem project-title="My Project" description="This is a description of my project."
+      :tags="['Vue', 'JavaScript']" github-url-ref="abc.com" live-app-url-ref="abc.com" />
 
 
   </div>
