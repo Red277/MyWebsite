@@ -18,10 +18,16 @@ import { RouterLink } from 'vue-router'
       <div style="position: relative; top: 20px;">
         <v-hover v-slot="{ isHovering, props }">
           <RouterLink to="/#about" active-class="">
-            <v-btn v-bind="props" :color="isHovering ? 'orange' : undefined">VIEW MY WORK</v-btn>
+            <v-btn :size="'large'" v-bind="props" :color="isHovering ? 'orange' : undefined">
+              VIEW MY WORK
+            </v-btn>
           </RouterLink>
         </v-hover>
       </div>
+
+      <v-icon :size="'50px'" position="absolute" style="top: 20px; color: gray;">
+        mdi-chevron-double-down
+      </v-icon>
     </div>
 
   </div>
