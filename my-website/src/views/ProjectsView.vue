@@ -2,6 +2,10 @@
 import ProjectItem from '@/components/ProjectItem.vue';
 import TitleGraphic from '@/components/TitleGraphic.vue';
 
+//Images
+
+import motmImage from '@/assets/motm-ui-new.png';
+
 </script>
 
 <template>
@@ -11,7 +15,8 @@ import TitleGraphic from '@/components/TitleGraphic.vue';
 
 
     <ProjectItem project-title="My Project" description="This is a description of my project."
-      :tags="['Vue', 'JavaScript']" github-url-ref="abc.com" live-app-url-ref="abc.com" order="left" />
+      :tags="['Vue', 'JavaScript']" github-url-ref="https://github.com/apps-of-the-millennium/motm"
+      live-app-url-ref="https://motm-b0426.web.app/" order="left" :image-ref="motmImage" />
 
 
   </div>
